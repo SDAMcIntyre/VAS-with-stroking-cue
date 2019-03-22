@@ -5,10 +5,10 @@ import pygame
 # -- GET INPUT FROM THE EXPERIMENTER --
 
 exptInfo = {'01. Participant Code':'00', 
-            '02. Experiment name':'', 
-            '03. Number of repeats':5, 
+            '02. Experiment name':'test', 
+            '03. Number of repeats':3,  
             '04. Speeds (cm/sec)':'1,3,30',
-            '05. Stimuli':'soft brush, rough brush, hand',
+            '05. Stimuli':'soft brush',
             '06. Stimulation site':'dorsal left hand',
             '08. Participant language':('en'), ## ('en','sv')
             '09. Folder for saving data':'data'}
@@ -35,8 +35,8 @@ displayTextDictionary = {
 #                    'interStimMessage':'...',
 #                    'finishedMessage':'Session finished.',
 #                    'strokeQuestion':'How pleasant was the last stimulus on your skin?',
-#                    'strokeMin':'unpleasant',
-#                    'strokeMax':'pleasant'} 
+#                    'strokeMin':'very unpleasant',
+#                    'strokeMax':'very pleasant'} 
             }
 
 ## select dictionary according to participant language
@@ -72,7 +72,7 @@ saveFiles = DataFileCollection(foldername = exptInfo['09. Folder for saving data
 
 # -- SETUP VISUAL INTERFACE INCLUDING VAS --
 
-participant = VASInterface(fullscr = False, screen = 1, size = [1920,1200],
+participant = VASInterface(fullscr = False, screen = 1, size = [3840,2160],
                             message = displayText['waitMessage'],
                             question = displayText['strokeQuestion'],
                             minLabel = displayText['strokeMin'],
